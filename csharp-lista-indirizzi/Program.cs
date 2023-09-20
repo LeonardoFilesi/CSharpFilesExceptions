@@ -6,20 +6,21 @@ namespace csharp_lista_indirizzi
     {
         static void Main(string[] args)
         {
-            List<Address> addressList = new List<Address>(Path );
+            List<Address> addressList = new List<Address>(Path);
 
-            try 
+            try
             {
                 Address();
                 foreach (var address in addressList)
                 {
                     Console.WriteLine($"{address.name}, {address.surname}");
                 }
-            } 
-            catch (WrongListingException ex) 
+            }
+            catch (WrongListingException ex)
             {
                 Console.WriteLine($"Errore nella compilazione della lista {ex.Message}");
             }
-            
+
         }
+    }
 }
